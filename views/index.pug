@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  .main.container.text-xs-center
+    if authenticated===true 
+      h1.display-3 Welcome #{user.firstname}
+      a.btn.btn-info-outline.btn-lg(href='/profile') Get Loans
+      a.btn.btn-info-outline.btn-lg(href='/loan') Create Loans
+    else
+      h1.display-3 Bank Loans for ASU students 
+      a.btn.btn-info-outline.btn-lg(href='/signIn') Get Started for FREE
+
+
